@@ -42,6 +42,8 @@ public class UserTests {
 	@Test(priority=1)
 	//individual API tests
 	public void testCreateUser() {
+		
+		logger.info("Creating user...");
 		Response response = UserEndPoints.createUser(payload);
 		response.then().log().all();
 		
